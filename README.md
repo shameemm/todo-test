@@ -81,3 +81,23 @@ Run the server
   DELETE task/update/<id>/
 ```
 
+
+
+
+## Another Simple Way to do CRUD in DRF
+
+Using viewset in DRF
+
+```bash
+class TodoViewset(viewsets.ModelViewSet):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
+
+class TaskViewSet(viewsets.ModelViewSet):
+    queryset = Tasks.objects.all()
+    serializer_class = TaskSerializer
+```
+
+
+
+    
